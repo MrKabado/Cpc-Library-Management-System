@@ -44,7 +44,7 @@ export default function Header() {
           <img src={Cpc.src} alt="Cpc Logo" className="w-10 h-10 border-white border-2 rounded-full"/>
             <div className="flex flex-col">
               <h1 className="text-xl font-semibold">CPC Libray</h1>
-              <p className="text-xs text-indigo-300">Admin Panel</p>
+              <p className="text-xs text-indigo-300">Student's Panel</p>
             </div>
         </div>
 
