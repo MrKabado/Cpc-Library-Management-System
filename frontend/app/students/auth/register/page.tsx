@@ -51,8 +51,20 @@ export default function SignUpPage() {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setSubmitted(true);
+
+    if (!schoolId || schoolId.trim() === "") {
+      toast.error("School Id must be numeric");
+      setSubmitted(false);
+      return;
+    }
+
+    if (!password || password.trim() === "") {
+      toast.error("Password must not be empty or space");
+      setSubmitted(false);
+      return;
+    }
+
     if (password != confirmPassword) {
       toast.error("Passwords do not mach");
       setSubmitted(false);
